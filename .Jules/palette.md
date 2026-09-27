@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing Alt Text in Documentation
+**Learning:** Accessibility isn't limited to UI components. Missing alt text on informative images (like header graphics or diagrams) in documentation files (like README.md) hinders screen reader users from understanding the full context of the project. Even in a UI-less project, documentation is a primary user interface.
+**Action:** Always verify that images in Markdown files (using `![]()`) have descriptive alt text included between the brackets.
