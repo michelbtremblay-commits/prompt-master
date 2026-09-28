@@ -1,0 +1,3 @@
+## 2024-05-24 - Alt Text for Markdown-Only Interfaces
+**Learning:** In repositories where the markdown documentation itself serves as the primary user interface, accessibility improvements must focus on markdown elements, such as providing descriptive alt text for informative and decorative images, because screen readers rely entirely on this text to convey the visual information to the user.
+**Action:** Always verify that images in markdown files have meaningful alt text, especially in markdown-only projects where the documentation is the UI.
