@@ -1,0 +1,3 @@
+## 2026-09-29 - Markdown-Only Codebase Performance Constraint
+**Learning:** This repository is purely composed of Markdown documentation representing a Claude Skill project. It lacks any executable code (e.g., frontend frameworks, backend servers) or traditional UI components. Consequently, standard runtime performance optimizations (such as mitigating React re-renders, caching API calls, or database indexing) are entirely inapplicable here.
+**Action:** When evaluating performance optimizations in this repository, recognize its strict Markdown-only nature. Do not attempt standard application performance optimizations. Instead, abort the task and do not create a PR if no suitable optimizations exist.
