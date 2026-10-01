@@ -1,4 +1,4 @@
-![](https://s6.imgcdn.dev/YvLVug.png)
+![Prompt Master Banner - A Claude Skill for Prompt Engineering](https://s6.imgcdn.dev/YvLVug.png)
 
 <br/>
 
