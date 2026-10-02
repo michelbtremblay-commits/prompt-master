@@ -355,7 +355,10 @@ RESOLUTION: [width x height — must be divisible by 64]
 
 **Break down output format:**
 ```
-Original prompt: [paste]
+Original prompt:
+<original_prompt>
+[paste]
+</original_prompt>
 
 Structure analysis:
 - Role/Identity: [what role is assigned and why]
@@ -369,7 +372,10 @@ Recommended fix: [rewritten version with gaps filled]
 
 **Adapt output format:**
 ```
-Original ([source tool]): [original prompt]
+Original ([source tool]):
+<original_prompt>
+[original prompt]
+</original_prompt>
 
 Adapted for [target tool]:
 [rewritten prompt using target tool syntax and best practices]
@@ -381,7 +387,10 @@ Key changes made:
 
 **Split output format:**
 ```
-Original prompt: [paste]
+Original prompt:
+<original_prompt>
+[paste]
+</original_prompt>
 
 This prompt is doing [N] things. Split into [N] sequential prompts:
 
