@@ -2,9 +2,9 @@
 
 <br/>
 
-A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention. No re-prompting your way to an answer you should have gotten on attempt one.
+A Claude skill that writes the accurate prompts for Gemini. Zero tokens or credits wasted. Full context and memory retention. No re-prompting your way to an answer you should have gotten on attempt one.
 
-**Works with:** Claude, ChatGPT, Gemini, o1/o3, MiniMax, Cursor, Claude Code, GitHub Copilot, Windsurf, Bolt, v0, Lovable, Devin, Perplexity, Midjourney, DALL-E, Stable Diffusion, ComfyUI, Sora, Runway, ElevenLabs, Zapier, Make, and any AI tool you throw at it.
+**Works with:** Gemini 2.x and Gemini 3 Pro.
 
 ---
 
@@ -44,27 +44,27 @@ Most "prompt generators" make prompts longer. This skill makes them sharper.
 In Claude, you can invoke the skill naturally:
 
 ```
-Write me a prompt for Cursor to refactor my auth module
+Write me a prompt for Gemini to refactor my auth module
 ```
 
 ```
-I need a prompt for Claude Code to build a REST API — ask me what you need to know
+I need a prompt for Gemini to build a REST API — ask me what you need to know
 ```
 
 ```
-Here's a bad prompt I wrote for GPT-4o, fix it: [paste prompt]
+Here's a bad prompt I wrote for Gemini, fix it: [paste prompt]
 ```
 
 ```
-Generate a Midjourney prompt for a cyberpunk city at night
+Generate a prompt for Gemini to write a story about a cyberpunk city at night
 ```
 
 ```
-I have a reference image — help me write a prompt to edit just the head angle
+I have a reference document — help me write a prompt for Gemini to extract the key findings
 ```
 
 ```
-Break this prompt down and adapt it for Stable Diffusion
+Break this prompt down and adapt it for Gemini
 ```
 
 Or explicitly invoke it:
@@ -72,7 +72,7 @@ Or explicitly invoke it:
 ```
 /prompt-master
 
-I want to ask Claude Code to build a todo app with React and Supabase
+I want to ask Gemini to help me architect a todo app with React and Supabase
 ```
 
 ---
@@ -81,7 +81,7 @@ I want to ask Claude Code to build a todo app with React and Supabase
 
 Prompt Master runs a structured pipeline on every request:
 
-1. **Detects the target tool** — figures out which AI system the prompt is for and routes silently to the right approach
+1. **Extracts intent for Gemini** — automatically targets Gemini as the AI system and prepares the right approach
 2. **Extracts 9 dimensions of intent** — task, input, output, constraints, context, audience, memory, success criteria, examples
 3. **Asks targeted clarifying questions** — max 3 questions if critical info is missing, never more
 4. **Routes to the right framework** — picks and applies the correct prompt architecture automatically, never shown to the user
@@ -90,30 +90,11 @@ Prompt Master runs a structured pipeline on every request:
 7. **Delivers the prompt** — one clean copyable block with a one-line strategy note
 
 ---
-## Full Example #1: Generating Prompts for Images
+## Full Example: Generating Prompts for Coding
 
 ### User Input
 ```
-Write me a midjourney prompt for a realistic samurai standing in the rain at night
-```
-
-### Generated Prompt
-```
-lone samurai standing in heavy rain at night, traditional armor, 
-neon reflections on wet cobblestone street, cinematic lighting, 
-dramatic shadows, fog, ultra detailed, photorealistic, 
-shallow depth of field --ar 16:9 --v 6 --style raw
-
-negative: blurry, low quality, watermark, cartoon, anime, extra limbs
-```
-**🎯 Target:** Midjourney · **⚡ Framework:** Visual Descriptor · **💰 Tokens:** Light (~60) · **💡 Strategy:** Comma-separated descriptors over prose, lighting and mood anchored early, aspect ratio and version locked, negative prompt prevents style drift.
-
----
-## Full Example #2: Generating Prompts for Coding
-
-### User Input
-```
-Build a claude code prompt for a landing page for a business 
+Build a Gemini prompt for a landing page for a business
 dashboard that looks and feels exactly like notion - smooth animations, 
 clean ui
 ```
@@ -187,57 +168,13 @@ Done When:
 - Hover states work on all interactive elements
 - Opens in browser with zero console errors
 ```
-**🎯 Target:** Claude Code · **💰 Tokens:** Medium (~380) · **💡 Strategy:** Every vague Notion aesthetic cue translated into exact hex values and pixel specs — Claude Code cannot guess wrong. Animations defined with exact timing, method, and trigger so there is no interpretation needed.
+**🎯 Target:** Gemini · **💰 Tokens:** Medium (~380) · **💡 Strategy:** Every vague Notion aesthetic cue translated into exact hex values and pixel specs — Gemini cannot guess wrong. Animations defined with exact timing, method, and trigger so there is no interpretation needed.
 
 ---
 
-## 🤝 Works With Any AI Tool
+## 🤝 Works With Gemini
 
-Prompt Master includes specific profiles for 20+ tools. For anything not on the list, it uses a **Universal Fingerprint**: 4 questions that let it write a quality prompt for any AI system it has never seen before.
-
-<details>
-<summary><h3> Click to view all 30+ tool profiles </h3></summary>
-
-| Tool | Category | What Prompt Master Fixes |
-|------|----------|--------------------------|
-| **Claude** | Reasoning LLM | Removes padding, adds XML structure, specifies length |
-| **ChatGPT / GPT-5.x** | Reasoning LLM | Output contract, verbosity control, completion criteria |
-| **Gemini 2.x** | Reasoning LLM | Grounding anchors, citation rules, format locks |
-| **o3 / o4-mini** | Thinking LLM | Short clean instructions only — never adds CoT (they think internally) |
-| **Ollama** | Local LLM | Asks which model is loaded, includes system prompt for Modelfile |
-| **Qwen 2.5 / Qwen3** | Open-weight LLM | Chat template format, thinking vs non-thinking mode detection |
-| **Local models (Llama, Mistral)** | Open-weight LLM | Shorter prompts, simpler structure, no complex nesting |
-| **DeepSeek-R1** | Reasoning LLM | Short clean instructions, strips CoT, suppresses thinking output if needed |
-| **MiniMax (M2.7 / M2.5)** | Reasoning LLM | Temperature clamping, thinking tag control, structured output optimization |
-| **Claude Code** | Agentic AI | Stop conditions, file scope, checkpoint output |
-| **Cursor / Windsurf** | IDE AI | File path, function name, do-not-touch list, sequential prompt guidance |
-| **GitHub Copilot** | Autocomplete AI | Exact function contract as docstring |
-| **Antigravity** | Agentic IDE | Task-based prompting, Artifact verification, autonomy level |
-| **Bolt / v0 / Lovable** | Full-stack generator | Stack spec, version, what NOT to scaffold |
-| **Figma Make** | Full-stack generator | Component name references, frame-to-code scope |
-| **Google Stitch** | Full-stack generator | Interface goal over implementation, Material Design 3 spec |
-| **Devin / SWE-agent** | Autonomous agent | Starting state, target state, stop conditions |
-| **Manus** | Autonomous agent | Task outcome focus, permission scope, memory anchors |
-| **OpenAI Computer Use** | Computer-use agent | Screen state, allowed apps, stop before irreversible actions |
-| **Perplexity Computer** | Computer-use agent | Artifact-first prompting, scoped permissions, verification steps |
-| **OpenClaw** | Computer-use agent | Conversational precision, persistent memory, security constraints |
-| **Perplexity / SearchGPT** | Search AI | Mode spec: search vs analyze vs compare |
-| **Midjourney** | Image AI | Comma-separated descriptors, parameters, negative prompts |
-| **DALL-E 3** | Image AI | Prose description, text exclusion — edit vs generate detection |
-| **Stable Diffusion** | Image AI | Weight syntax `(word:1.3)`, CFG guidance, mandatory negative prompt |
-| **SeeDream** | Image AI | Art style first, mood and atmosphere descriptors, negative prompt |
-| **ComfyUI** | Image AI | Positive/negative node split, checkpoint-specific syntax |
-| **Meshy / Tripo / Rodin** | 3D AI | Style + export format + polygon budget + rig requirements |
-| **BlenderGPT** | 3D AI | Python script output, Blender version, scene context |
-| **Unity AI** | 3D / Game AI | Game genre, platform target, mechanic description over code |
-| **Sora / Runway** | Video AI | Camera movement, duration, cut style |
-| **LTX / Dream Machine / Kling** | Video AI | Cinematic language, motion intensity, style reference |
-| **ElevenLabs** | Voice AI | Emotion, pacing, emphasis, speech rate |
-| **Zapier / Make / n8n** | Workflow automation | Trigger app + event, action app + field mapping |
-
-</details>
-
----
+Prompt Master is now optimized exclusively for Gemini (Gemini 2.x and Gemini 3 Pro).
 
 ## 📐 12 Prompt Templates (Auto-Selected)
 
@@ -254,11 +191,6 @@ Prompt Master picks the right architecture for every task automatically and rout
 | **CRISPE** (Capacity, Role, Insight, Statement, Personality, Experiment) | Creative work, brand voice, iterative content |
 | **Chain of Thought** | Math, logic, debugging, multi-step analysis |
 | **Few-Shot** | Consistent structured output, pattern replication |
-| **File-Scope Template** | Cursor, Windsurf, Copilot — any code editing AI |
-| **ReAct + Stop Conditions** | Claude Code, Devin, AutoGPT — any autonomous agent |
-| **Visual Descriptor** | Midjourney, DALL-E, Stable Diffusion, Sora — generation |
-| **Reference Image Editing** | Editing an existing image — detects edit vs generate automatically |
-| **ComfyUI** | Node-based image workflows — positive/negative split per checkpoint |
 | **Prompt Decompiler** | Breaking down, adapting, simplifying, or splitting existing prompts |
 
 </details>
