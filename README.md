@@ -1,4 +1,4 @@
-![](https://s6.imgcdn.dev/YvLVug.png)
+![Prompt Master Skill Banner](https://s6.imgcdn.dev/YvLVug.png)
 
 <br/>
 
