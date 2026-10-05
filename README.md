@@ -1,4 +1,4 @@
-![](https://s6.imgcdn.dev/YvLVug.png)
+![Prompt Master Header Image](https://s6.imgcdn.dev/YvLVug.png)
 
 <br/>
 
