@@ -1,0 +1,3 @@
+## 2024-05-24 - Missing Alt Text on Markdown Banner Images
+**Learning:** Even in markdown-only repositories, primary visual assets like banner images must have descriptive alt text to remain accessible to screen readers, ensuring the project's purpose is conveyed to all users.
+**Action:** Always verify that images in READMEs and documentation include meaningful alt text, especially for prominent visuals that set the context for the project.
