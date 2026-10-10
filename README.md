@@ -1,4 +1,4 @@
-![](https://s6.imgcdn.dev/YvLVug.png)
+![Prompt Master Banner - A Claude skill that writes accurate prompts for any AI tool](https://s6.imgcdn.dev/YvLVug.png)
 
 <br/>
 
