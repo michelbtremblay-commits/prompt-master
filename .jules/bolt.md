@@ -1,0 +1,3 @@
+## 2026-10-12 - Markdown-Only Codebase Performance
+**Learning:** This repository is a markdown-only Claude Skill documentation project containing no executable source code or UI components. Standard runtime performance optimizations (e.g., code execution, UI rendering, DB queries) are not applicable here.
+**Action:** Skip standard application performance optimization tasks and do not create a PR if no suitable optimization is found in such repositories.
