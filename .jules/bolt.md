@@ -1,0 +1,3 @@
+## 2026-10-31 - Architecture: Markdown-Only Repository
+**Learning:** The repository is a markdown-only Claude Skill documentation project and contains no user interface (UI) components or executable source code. Therefore, standard runtime performance optimizations (e.g., code execution, UI rendering, DB queries) are not applicable to this repository.
+**Action:** Skip standard application performance optimization tasks and do not create a PR if no suitable optimization is found in this specific type of project.
